@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة الأدوات الذكية | عبدالرحمن محمد</title>
+    
+    <style>
+        /* التنسيق العام - خلفية سوداء مظلمة */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117;
+            color: #e6edf3;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 80px;
+            box-sizing: border-box;
+        }
+
+        /* تأثير الأضواء الملونة المتحركة على أطراف الموقع */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border: 6px solid transparent;
+            border-image: linear-gradient(45deg, #ff0055, #00ff66, #0011ff, #ff0055) 1;
+            pointer-events: none;
+            z-index: 9999;
+            animation: borderGlow 6s linear infinite;
+        }
+
+        @keyframes borderGlow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        /* تصميم الهيدر الاحترافي باسم عبد الرحمن */
+        header {
+            background: linear-gradient(135deg, #161b22, #21262d);
+            text-align: center;
+            padding: 3rem 1rem;
+            border-bottom: 2px solid #30363d;
+        }
+        .designer-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin: 0;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px #3498db, 0 0 20px #3498db, 0 0 30px #3498db;
+            animation: pulseGlow 2s ease-in-out infinite alternate;
+        }
+        @keyframes pulseGlow {
+            from { text-shadow: 0 0 10px #3498db, 0 0 20px #3498db; }
+            to { text-shadow: 0 0 15px #2ecc71, 0 0 25px #2ecc71, 0 0 35px #2ecc71; }
+        }
+        .sub-title {
+            margin: 0.8rem 0 0 0;
+            color: #8b949e;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* تصميم البطاقات المنظمة المظلمة */
+        .card {
+            background-color: #161b22;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid #30363d;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        .card h2 {
+            color: #58a6ff;
+            margin-top: 0;
+            font-size: 1.4rem;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* تصنيفات العادات */
+        .category-title {
+            font-size: 1rem;
+            color: #ffa657;
+            margin: 1rem 0 0.5rem 0;
+            font-weight: bold;
+        }
+
+        .habit-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .habit-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.7rem 1rem;
+            background: #21262d;
+            border-radius: 8px;
+            border-right: 4px solid #238636;
+        }
+        .habit-text {
+            font-size: 0.95rem;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .date-badge {
+            font-size: 0.75rem;
+            color: #8b949e;
+            background-color: #0d1117;
+            padding: 2px 6px;
+            border-radius: 4px;
+            width: fit-content;
+        }
+
+        /* الأزرار */
+        button {
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .btn-done {
+            background-color: #238636;
+            color: white;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+        }
+        .btn-done:hover { background-color: #2ea043; }
+        .btn-done:disabled {
+            background-color: #30363d;
+            color: #8b949e;
+            cursor: not-allowed;
+        }
+
+        /* قسم علم النفس */
+        .tip-box {
+            background-color: #21262d;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #8957e5;
+            margin-bottom: 1rem;
+            font-style: italic;
+            color: #c9d1d9;
+        }
+
+        /* قسم تواصل معنا */
+        .contact-info {
+            text-align: center;
+            padding: 1rem;
+        }
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+        }
+        .btn-whatsapp:hover {
+            background-color: #1ebd59;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #161b22;
+            color: #8b949e;
+            font-size: 0.85rem;
+            border-top: 1px solid #30363d;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- اسمك الاحترافي اللامع -->
+        <div class="designer-title">عبدالرحمن محمد مصمم الموقع</div>
+        <div class="sub-title">منصة الأدوات الذكية، بناء العادات، وفهم حقائق علم النفس وتطوير الذات 🛠️</div>
+    </header>
+
+    <main>
+        <!-- قسم العادات الشامل -->
+        <div class="card">
+            <h2>🎯 متعقب العادات اليومية الشامل</h2>
+            <p style="color: #8b949e; font-size: 0.9rem;">اضغط على "تم" لتسجيل الإنجاز بالتاريخ والوقت تلقائياً في ذاكرة الموقع:</p>
+            
+            <!-- تصنيف الرياضة -->
+            <div class="category-title">🏃‍♂️ الرياضة والنشاط</div>
+            <div class="habit-list">
+                <div class="habit-item">
+                    <div class="habit-text">
+                        <span>ممارسة تمارين كارديو أو مقاومة لمدة 30 دقيقة</span>
+                        <span class="date-badge" id="date-h1"></span>
+                    </div>
+                    <button class="btn-done" id="btn-h1" onclick="completeHabit('h1')">تم ✅</button>
+                </div>
+                <div class="habit-item">
+                    <div class="habit-text">
+                        <span>تأمل وتمدد (إطالات) للجسم صباحاً</span>
+                        <span class="date-badge" id="date-h2"></span>
+                    </div>
+                    <button class="btn-done" id="btn-h2" onclick="completeHabit('h2')">تم ✅</button>
+                </div>
+            </div>
+
+            <!-- تصنيف الأكل والشرب -->
+            <div class="category-title">🍏 الأكل والشرب الصحي</div>
+            <div class="habit-list">
+                <div class="habit-item">
+                    <div class="habit-text">
+                        <span>شرب 3 لتر من الماء على مدار اليوم</span>
+                        <span class="date-badge" id="date-h3"></span>
+                    </div>
+                    <button class="btn-done" id="btn-h3" onclick="completeHabit('h3')">تم ✅</button>
+                </div>
+                <div class="habit-item">
+                    <div class="habit-text">
+                        <span>تناول وجبات صحية والابتعاد عن السكريات المصنعة</span>
+                        <span class="date-badge" id="date-h4"></span>
+                    </div>
+                    <button class="btn-done" id="btn-h4" onclick="completeHabit('h4')">تم ✅</button>
+                </div>
+            </div>
+
+            <!-- تصنيف النوم -->
+            <div class="category-title">😴 النوم والراحة</div>
+            <div class="habit-list">
+                <div class="habit-item">
+                    <div class="habit-text">
+                        <span>النوم مبكراً والاستيقاظ مبكراً (7-8 ساعات)</span>
+                        <span class="date-badge" id="date-h5"></span>
+                    </div>
+                    <button class="btn-done" id="btn-h5" onclick="completeHabit('h5')">تم ✅</button>
+                </div>
+                <div class="habit-item">
+                    <div class="habit-text">
+                        <span>الابتعاد عن الشاشات قبل النوم بنصف ساعة</span>
+                        <span class="date-badge" id="date-h6"></span>
+                    </div>
+                    <button class="btn-done" id="btn-h6" onclick="completeHabit('h6')">تم ✅</button>
+                </div>
+            </div>
+
+            <!-- تصنيف العمل والتطوير -->
+            <div class="category-title">💻 العمل والتعلم الشخصي</div>
+            <div class="habit-list">
+                <div class="habit-item">
+                    <div class="habit-text">
+                        <span>تخصيص ساعة لتعلم البرمجة وتطوير الموقع</span>
+                        <span class="date-badge" id="date-h7"></span>
+                    </div>
+                    <button class="btn-done" id="btn-h7" onclick="completeHabit('h7')">تم ✅</button>
+                </div>
+                <div class="habit-item">
+                    <div class="habit-text">
+                        <span>قراءة 10 صفحات من كتاب مفيد</span>
+                        <span class="date-badge" id="date-h8"></span>
+                    </div>
+                    <button class="btn-done" id="btn-h8" onclick="completeHabit('h8')">تم ✅</button>
+                </div>
+            </div>
+
+            <!-- تصنيف اللعب والترويح -->
+            <div class="category-title">🎮 اللعب والترويح عن النفس</div>
+            <div class="habit-list">
+                <div class="habit-item">
+                    <div class="habit-text">
+                        <span>وقت محدد ومقنن للألعاب الإلكترونية (دون إفراط)</span>
+                        <span class="date-badge" id="date-h9"></span>
+                    </div>
+                    <button class="btn-done" id="btn-h9" onclick="completeHabit('h9')">تم ✅</button>
+                </div>
+            </div>
+            
+            <button onclick="clearAllData()" style="background-color: #e74c3c; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; margin-top: 1.5rem; font-size: 0.85rem; width: 100%;">إعادة تعيين كافة العادات وتفريغ السجل 🔄</button>
+        </div>
+
+        <!-- قسم نصائح علم النفس وتطوير الذات -->
+        <div class="card" style="border-top: 3px solid #8957e5;">
+            <h2>🧠 أسرار علم النفس وتطوير الذات</h2>
+            <p style="color: #8b949e; font-size: 0.9rem;">حقائق نفسية تساعدك على فهم عقلك الباطن وإدارته:</p>
+            
+            <div class="tip-box">"قاعدة الـ 5 ثواني: إذا كان لديك رغبة في فعل شيء، يجب أن تتحرك جسدياً خلال 5 ثوانٍ وإلا سيقوم عقلك بتأجيلها وإلغائها."</div>
+            <div class="tip-box">"تأثير الهالة: عقلك يميل لربط العادات الجديدة بمكان محدد أو مكافأة صغيرة، لكي يسهل عليك الالتزام بها دون مقاومة."</div>
+            <div class="tip-box">"الإنتاجية لا تعني كثرة العمل، بل تعني التركيز الذكي. تخصيص وقت محدد ومغلق ينقذك من التشتت والتسويف."</div>
+        </div>
+
+        <!-- قسم تواصل معنا المربوط برقمك اليمني مباشرة -->
+        <div class="card" style="border-top: 3px solid #25d366;">
+            <h2>📞 تواصل معنا</h2>
+            <div class="contact-info">
+                <p>هل لديك أي اقتراحات أو استفسارات لتطوير المنصة؟ أنا هنا لمساعدتك!</p>
+                <!-- تم ربط رقمك الدولي بنجاح مع رسالة مخصصة -->
+                <a href="https://wa.me/967730773006?text=مرحباً%20عبدالرحمن%20أنا%20معجب%20بمنصتك%20الذكية" target="_blank" class="btn-whatsapp">تواصل معي عبر واتساب 💬</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>حقوق النشر © 2026 | صُنع بكل شغف بواسطة المطور عبدالرحمن محمد</p>
+    </footer>
+
+    <script>
+        // دالة لحساب رقم الأسبوع في السنة الحالية
+        function getWeekNumber(d) {
+            d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+            d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay()||7));
+            var yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+            var weekNo = Math.ceil(( ( (d - yearStart) / 86400000) + 1)/7);
+            return weekNo;
+        }
+
+        // دالة تمييز العادات عند الإنجاز وحفظها بالتاريخ
+        function completeHabit(id) {
+            const now = new Date();
+            const days = ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
+            const dayName = days[now.getDay()];
+            const day = now.getDate();
+            const month = now.getMonth() + 1;
+            const year = now.getFullYear();
+            const week = getWeekNumber(now);
+
+            const dateString = `تم الإنجاز: يوم ${dayName} (${day}/${month}/${year}) - الأسبوع: ${week} من السنة`;
+            localStorage.setItem(id, dateString);
+            applyCompletedStyle(id, dateString);
+            alert("تم تسجيل إنجازك وحفظه بالتاريخ الكامل بنجاح! 🎉");
+        }
+
+        function applyCompletedStyle(id, dateText) {
+            const dateBadge = document.getElementById(`date-${id}`);
+            const button = document.getElementById(`btn-${id}`);
+            if (dateBadge && button) {
+                dateBadge.textContent = dateText;
+                button.disabled = true;
+                button.textContent = "مكتملة ✓";
+                dateBadge.parentElement.style.textDecoration = "line-through";
+                dateBadge.parentElement.style.color = "#8b949e";
+            }
+        }
+
+        function checkSavedHabits() {
+            const habitIds = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7', 'h8', 'h9'];
+            habitIds.forEach(id => {
+                const savedDate = localStorage.getItem(id);
+                if (savedDate) {
+                    applyCompletedStyle(id, savedDate);
+                }
+            });
+        }
+
+        function clearAllData() {
+            if (confirm("هل أنت متأكد من مسح جميع العادات المسجلة والسجل بالكامل؟")) {
+                localStorage.clear();
+                location.reload();
+            }
+        }
+
+        checkSavedHabits();
+    </script>
+</body>
+</html>
