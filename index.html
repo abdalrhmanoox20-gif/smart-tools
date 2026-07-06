@@ -3,78 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة الأدوات الذكية | عبدالرحمن محمد</title>
-    
+    <title>منصة الأدوات الذكية</title>
     <style>
-        /* التنسيق العام - خلفية سوداء مظلمة */
+        /* تصميم الموقع */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0d1117;
-            color: #e6edf3;
-            margin: 0;
-            padding: 0;
-            padding-bottom: 80px;
-            box-sizing: border-box;
-        }
-
-        /* تأثير الأضواء الملونة المتحركة على أطراف الموقع */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            border: 6px solid transparent;
-            border-image: linear-gradient(45deg, #ff0055, #00ff66, #0011ff, #ff0055) 1;
-            pointer-events: none;
-            z-index: 9999;
-            animation: borderGlow 6s linear infinite;
-        }
-
-        @keyframes borderGlow {
-            0% { filter: hue-rotate(0deg); }
-            100% { filter: hue-rotate(360deg); }
-        }
-
-        /* تصميم الهيدر الاحترافي باسم عبد الرحمن */
-        header {
-            background: linear-gradient(135deg, #161b22, #21262d);
-            text-align: center;
-            padding: 3rem 1rem;
-            border-bottom: 2px solid #30363d;
-        }
-        .designer-title {
-            font-size: 2.2rem;
-            font-weight: 800;
+            background-color: #121212;
             color: #ffffff;
             margin: 0;
-            letter-spacing: 1px;
-            text-shadow: 0 0 10px #3498db, 0 0 20px #3498db, 0 0 30px #3498db;
-            animation: pulseGlow 2s ease-in-out infinite alternate;
+            padding: 0;
+            text-align: center;
         }
-        @keyframes pulseGlow {
-            from { text-shadow: 0 0 10px #3498db, 0 0 20px #3498db; }
-            to { text-shadow: 0 0 15px #2ecc71, 0 0 25px #2ecc71, 0 0 35px #2ecc71; }
+        header {
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-bottom: 2px solid #00adb5;
         }
-        .sub-title {
-            margin: 0.8rem 0 0 0;
-            color: #8b949e;
-            font-size: 1.1rem;
-            font-weight: 400;
+        h1 {
+            color: #00adb5;
+            margin: 0;
         }
-
-        main {
+        .container {
+            padding: 20px;
             max-width: 600px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            margin: 0 auto;
         }
+        .welcome-msg {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #eeeeee;
+        }
+        /* صندوق الأدوات */
+        .tool-box {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .tool-box h3 {
+            color: #00adb5;
+            margin-top: 0;
+        }
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #1f1f1f;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
 
-        /* تصميم البطاقات المنظمة المظلمة */
-        .card {
-            background-color: #161b22;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            border: 1px solid #30363d;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    <header>
+        <h1>منصة الأدوات الذكية 🛠️</h1>
+        <p>تطوير وتصميم: عبد الرحمن محمد</p>
+    </header>
+
+    <div class="container">
+        <p class="welcome-msg">مرحباً بك في منصتي البرمجية الجديدة. هنا ستجد أدوات متنوعة ومفيدة يومياً!</p>
+
+        <!-- مساحة الأداة الأولى (سنبرمجها في الخطوة القادمة) -->
+        <div class="tool-box">
+            <h3>تطبيق العادات اليومية 📅</h3>
+            <p>قريباً.. هنا سنقوم ببناء أداة تتبع العادات خطوة بخطوة معاً.</p>
+        </div>
+
+        <!-- مساحة لأدوات أخرى مستقبلاً -->
+        <div class="tool-box">
+            <h3>أداة ذكية أخرى ⚡</h3>
+            <p>مساحة جاهزة لإضافة أداة جديدة مفيدة للزوار.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © ٢٠٢٦ - عبد الرحمن محمد</p>
+    </footer>
+
+</body>
+</html>
         }
         .card h2 {
             color: #58a6ff;
